@@ -1,11 +1,12 @@
 import {ArrowRight, Calendar, CheckCircle, Users} from "lucide-react"
 import {ReactNode} from "react";
+import {Metadata} from "next";
 
 
 const url="https://www.gymtomo.com"
 const title="ジムとも | フィットネスLINEアプリ"
 const description="ジムともは、友達と一緒にジム通いを続けられるフィットネスアプリ。LINEを使ってジム通いの状況を簡単に共有し、継続をサポートします。"
-export const metadata = {
+export const metadata:Metadata = {
     title: title,
     description:description,
     openGraph: {
@@ -30,7 +31,9 @@ export const metadata = {
     },
     robots: 'index, follow',
     keywords: ['ジムとも', 'フィットネスアプリ', 'LINE連携', 'ジム', 'トレーニング', '健康'],
-    canonical: url,
+    alternates:{
+        canonical:url
+    }
 };
 
 export default function LandingPage() {
