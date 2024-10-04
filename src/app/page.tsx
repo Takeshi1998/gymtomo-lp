@@ -145,13 +145,13 @@ export default function LandingPage() {
 
             <footer className="bg-gray-800 text-white py-8 px-4">
                     <div className="flex space-x-4 mt-4 md:mt-0 justify-center">
-                        <a href="#" className="text-sm hover:underline">
+                        <a href="/privacy" className="text-sm hover:underline">
                             プライバシーポリシー
                         </a>
-                        <a href="#" className="text-sm hover:underline">
+                        <a href="/term" className="text-sm hover:underline">
                             利用規約
                         </a>
-                        <a href="#" className="text-sm hover:underline">
+                        <a href="/laws" className="text-sm hover:underline">
                             特定商取引法に基づく表記
                         </a>
                 </div>
