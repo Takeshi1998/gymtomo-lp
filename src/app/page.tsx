@@ -27,7 +27,7 @@ export const metadata:Metadata = {
         card: 'summary',
         title: title,
         description: description,
-        image: '/images/twitter-ogp.png',
+        images:['/images/twitter-ogp.png']
     },
     robots: 'index, follow',
     keywords: ['ジムとも', 'フィットネスアプリ', 'LINE連携', 'ジム', 'トレーニング', '健康'],
