@@ -1,6 +1,5 @@
 import {ArrowRight, Calendar, CheckCircle, Users} from "lucide-react"
 import {ReactNode} from "react";
-import {Metadata} from "next";
 
 export default function LandingPage() {
     return (
