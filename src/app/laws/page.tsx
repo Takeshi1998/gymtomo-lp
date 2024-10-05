@@ -9,7 +9,7 @@ export default function TermsOfService() {
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
-            <h2 className="font-semibold">事業者の名称</h2>
+            <h2 className="font-semibold">事業者の氏名</h2>
             <p>伊藤武</p>
           </div>
           <div>

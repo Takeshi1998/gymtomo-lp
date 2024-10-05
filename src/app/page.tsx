@@ -2,40 +2,6 @@ import {ArrowRight, Calendar, CheckCircle, Users} from "lucide-react"
 import {ReactNode} from "react";
 import {Metadata} from "next";
 
-
-const url="https://www.gymtomo.com"
-const title="ジムとも | フィットネスLINEアプリ"
-const description="ジムともは、友達と一緒にジム通いを続けられるフィットネスアプリ。LINEを使ってジム通いの状況を簡単に共有し、継続をサポートします。"
-export const metadata:Metadata = {
-    title: title,
-    description:description,
-    openGraph: {
-        title: title,
-        description: description,
-        url: url,
-        type: 'website',
-        images: [
-            {
-                url: '/images/ogp.png',
-                width: 1200,
-                height: 630,
-                alt: title+'のバナー画像',
-            },
-        ],
-    },
-    twitter: {
-        card: 'summary',
-        title: title,
-        description: description,
-        images:['/images/twitter-ogp.png']
-    },
-    robots: 'index, follow',
-    keywords: ['ジムとも', 'フィットネスアプリ', 'LINE連携', 'ジム', 'トレーニング', '健康'],
-    alternates:{
-        canonical:url
-    }
-};
-
 export default function LandingPage() {
     return (
         <div className="flex flex-col min-h-screen">
@@ -145,11 +111,11 @@ export default function LandingPage() {
 
             <footer className="bg-gray-800 text-white py-8 px-4">
                     <div className="flex space-x-4 mt-4 md:mt-0 justify-center">
-                        <a href="/privacy" className="text-sm hover:underline">
-                            プライバシーポリシー
-                        </a>
                         <a href="/term" className="text-sm hover:underline">
                             利用規約
+                        </a>
+                        <a href="/privacy" className="text-sm hover:underline">
+                            プライバシーポリシー
                         </a>
                         <a href="/laws" className="text-sm hover:underline">
                             特定商取引法に基づく表記
