@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import React from "react";
 
 const PrivacyPolicy = () => {
@@ -47,6 +47,9 @@ const PrivacyPolicy = () => {
                 <h2 className="text-lg font-semibold">6. お問い合わせ</h2>
                 <p>個人情報に関するお問い合わせは、当社サポートまでご連絡ください。</p>
             </CardContent>
+            <CardFooter>
+                <p>2024年10月5日制定</p>
+            </CardFooter>
         </Card>
     );
 };

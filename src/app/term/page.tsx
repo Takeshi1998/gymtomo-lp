@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import {Card, CardHeader, CardTitle, CardContent, CardFooter} from "@/components/ui/card";
 
 const TermsOfServicePage: React.FC = () => {
     return (
@@ -114,6 +114,9 @@ const TermsOfServicePage: React.FC = () => {
 
                     </div>
                 </CardContent>
+                <CardFooter>
+                    <p>2024年10月5日制定</p>
+                </CardFooter>
             </Card>
         </div>
     );
