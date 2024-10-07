@@ -6,7 +6,13 @@ export default function LandingPage() {
     return (
         <div className="flex flex-col min-h-screen">
             <header className="flex items-center justify-between px-4 py-4 bg-white">
-                <Image src="/images/header-icon.png" alt="ジムとも" width={125} height={27} />
+                <Image
+                    src="/images/header-icon.png"
+                    alt="ジムとも"
+                    width={125}
+                    height={27}
+                    className="w-[100px] h-[22px] sm:w-[125px] sm:h-[27px]"
+                />
                 <nav className="hidden md:flex space-x-4">
                     <a href="#features" className="text-gray-600 hover:text-[#FF8C00]">
                         機能
