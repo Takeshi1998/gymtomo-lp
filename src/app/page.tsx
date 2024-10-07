@@ -1,11 +1,12 @@
 import {ArrowRight, Calendar, CheckCircle, Users} from "lucide-react"
 import {ReactNode} from "react";
+import Image from "next/image";
 
 export default function LandingPage() {
     return (
         <div className="flex flex-col min-h-screen">
             <header className="flex items-center justify-between px-4 py-4 bg-white">
-                <div className="text-2xl font-bold text-[#FF8C00]">ジムとも</div>
+                <Image src="/images/header-icon.png" alt="ジムとも" width={125} height={27} />
                 <nav className="hidden md:flex space-x-4">
                     <a href="#features" className="text-gray-600 hover:text-[#FF8C00]">
                         機能
