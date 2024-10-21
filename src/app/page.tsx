@@ -1,171 +1,98 @@
-import {ArrowRight, Calendar, CheckCircle, Users} from "lucide-react"
-import {ReactNode} from "react";
 import Image from "next/image";
 
-export default function LandingPage() {
+export default function HomePage() {
     return (
-        <div className="flex flex-col min-h-screen">
-            <header className="flex items-center justify-between px-4 py-4 bg-white">
-                <Image
-                    src="/images/header-icon.png"
-                    alt="ジムとも"
-                    width={125}
-                    height={27}
-                    className="w-[100px] h-[22px] sm:w-[125px] sm:h-[27px]"
+        <div className="bg-white max-w-sm mx-auto">
+            <header className="flex items-center justify-between px-4 pt-4 bg-white">
+                <img
+                    src="/images/logo.svg"
+                    alt="ジムトモのロゴ"
+                    width={120}
+                    height={26}
+                    className="w-[100px] h-[22px]"
                 />
-                <nav className="hidden md:flex space-x-4">
-                    <a href="#features" className="text-gray-600 hover:text-[#FF8C00]">
-                        機能
-                    </a>
-                    <a href="#how-to-use" className="text-gray-600 hover:text-[#FF8C00]">
-                        使い方
-                    </a>
-                    <a href="#benefits" className="text-gray-600 hover:text-[#FF8C00]">
-                        メリット
-                    </a>
-                </nav>
             </header>
 
-            <main className="flex-grow">
-                <section className="bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white py-20 px-4">
-                    <div className="container mx-auto text-center">
-                        <h1 className="text-4xl font-bold mb-4">
-                            一緒に頑張る！ジム通いを共有するフィットネスアプリ
-                        </h1>
-                        <p className="text-xl mb-8">
-                            LINEで今すぐ使える、ユーザー登録不要で簡単スタート！
+            <section className="flex flex-col items-center text-center pt-1 px-6">
+                <h1 className="text-2xl font-bold mt-6" >ジム通いをシェアする<br/>フィットネスアプリ</h1>
+                <p className="text-gray-500 mt-4">
+                    ジムトモは仲間と目標を共有し、互いに刺激を支え合えるスタイリッシュなフィットネスアプリです。
+                </p>
+                <div className="max-w-md mx-auto">
+                    <Image src="/images/lp/top.jpg" alt="ジムトモのスクリーンショット" width={335} height={308}/>
+                </div>
+                <div className="mt-8">
+                    <p>\ LINEの友達追加で今すぐ始める /</p>
+                    <a href="https://lin.ee/43ViCSa">
+                        <img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
+                                                          alt="友だち追加" height="36" border="0"/></a>
+                </div>
+            </section>
+
+            {/* Features Section */}
+            <section className="py-12">
+                <div className="max-w-4xl mx-auto px-4">
+                    <div className="flex flex-col items-center mb-8" id="features">
+                        <img src={"/images/lp/friend.svg"} alt="記録一覧画面" width={167} height={197}/>
+                        <h2 className="text-lg font-bold mt-4">LINEで友達のジム通いを共有できる</h2>
+                        <p className="text-gray-500 mt-2 text-center">
+                            友達のジム通い状況をアプリ内で確認し、LINEでもメッセージを送ることができます。
                         </p>
-
-                        <LineButton/>
                     </div>
-                </section>
-
-                <section id="features" className="py-20 px-4 bg-gray-50">
-                    <div className="container mx-auto">
-                        <h2 className="text-3xl font-bold text-center mb-12">主な機能</h2>
-                        <div className="grid md:grid-cols-3 gap-8">
-                            <FeatureCard
-                                icon={<Calendar className="w-12 h-12 text-[#FF8C00]"/>}
-                                title="ジム登録＆チェックイン"
-                                description="通っているジムを簡単登録。ジムから200m以内でLINEからチェックイン。"
-                            />
-                            <FeatureCard
-                                icon={<Users className="w-12 h-12 text-[#FF8C00]"/>}
-                                title="グループ機能"
-                                description="友達とグループを作成し、進捗を共有。お互いを応援し合おう！"
-                            />
-                            <FeatureCard
-                                icon={<CheckCircle className="w-12 h-12 text-[#FF8C00]"/>}
-                                title="目標設定＆記録"
-                                description="週のジム通い目標と「覚悟の金額」を設定。トレーニング内容をテキストで記録。"
-                            />
-                        </div>
+                    <div className="flex flex-col items-center mb-8">
+                        <img src={"/images/lp/checkin.svg"} alt="ジム通いの記録" width={167} height={199}/>
+                        <h2 className="text-lg font-bold mt-4">LINEで簡単にジム通い記録できる</h2>
+                        <p className="text-gray-500 mt-2 text-center">
+                            通っているジムを手軽に登録し、位置情報を元にLINEから簡単にジム通いが記録できます。
+                        </p>
                     </div>
-                </section>
-
-                <section id="how-to-use" className="py-20 px-4">
-                    <div className="container mx-auto">
-                        <h2 className="text-3xl font-bold text-center mb-12">使い方</h2>
-                        <div className="grid md:grid-cols-2 gap-8">
-                            <div className="bg-white p-6 rounded-lg shadow-md">
-                                <h3 className="text-xl font-semibold mb-4">1. LINEで友だち追加</h3>
-                                <p>「ジムとも」を友だち追加し、すぐにスタート</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-lg shadow-md">
-                                <h3 className="text-xl font-semibold mb-4">2. ジム登録</h3>
-                                <p>通っているジムを登録</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-lg shadow-md">
-                                <h3 className="text-xl font-semibold mb-4">3. グループ作成・参加</h3>
-                                <p>友達を招待してグループを作成</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-lg shadow-md">
-                                <h3 className="text-xl font-semibold mb-4">4. 目標と覚悟の金額設定</h3>
-                                <p>毎週の目標と達成できなかった場合の覚悟の金額を設定</p>
-                            </div>
-                        </div>
+                    <div className="flex flex-col items-center">
+                        <img src={"/images/lp/money.svg"} alt="覚悟の金額" width={167} height={202}/>
+                        <h2 className="text-lg font-bold mt-4">覚悟の金額を設定できる</h2>
+                        <p className="text-gray-500 mt-2 text-center">
+                            ジムをサボった際に課金される金額を設定できます。覚悟を決めて継続力にアップに繋げましょう。
+                        </p>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section id="benefits" className="py-20 px-4 bg-gray-50">
-                    <div className="container mx-auto">
-                        <h2 className="text-3xl font-bold text-center mb-12">メリット</h2>
-                        <div className="grid md:grid-cols-3 gap-8">
-                            <BenefitCard
-                                title="継続しやすい"
-                                description="友達と一緒だからサボりにくい"
-                            />
-                            <BenefitCard
-                                title="モチベーションアップ"
-                                description="お互いを応援し合い、モチベーション維持"
-                            />
-                            <BenefitCard
-                                title="簡単スタート"
-                                description="アプリ不要、ユーザー登録不要でLINEからすぐに始められる"
-                            />
-                        </div>
+            {/* How to Use Section */}
+            <section className="bg-gray-50 py-12">
+                <div className="max-w-4xl mx-auto px-4">
+                    <h2 className="text-2xl font-bold text-center mb-8" id="how-to-use">ご利用までの流れ</h2>
+                    <div className="flex flex-col items-center mb-8">
+                        <img src={"/images/lp/add-friend.svg"} alt="LINE友達追加" width={167} height={194}/>
+                        <h3 className="text-lg font-bold mt-4">STEP1</h3>
+                        <p className="text-gray-500 mt-2">LINEで友だち追加します</p>
                     </div>
-                </section>
-
-                <section className="py-20 px-4 bg-[#FF8C00] text-white">
-                    <div className="container mx-auto text-center">
-                        <h2 className="text-3xl font-bold mb-8">今すぐ始めよう！</h2>
-                       <LineButton/>
+                    <div className="flex flex-col items-center mb-8">
+                        <img src={"/images/lp/checkin.svg"} alt="ユーザー登録方法" width={167} height={199}/>
+                        <h3 className="text-lg font-bold mt-4">STEP2</h3>
+                        <p className="text-gray-500 mt-2">トーク画面でチェックインボタンを押します</p>
                     </div>
-                </section>
-            </main>
+                    <div className="flex flex-col items-center mb-8">
+                        <img src={"/images/lp/add-friend.svg"} alt="目標設定" width={167} height={181}/>
+                        <h3 className="text-lg font-bold mt-4">STEP3</h3>
+                        <p className="text-gray-500 mt-2">アプリで目標設定します</p>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <img src={"/images/lp/line-checkin.svg"} alt="記録画面" width={167} height={199}/>
+                        <h3 className="text-lg font-bold mt-4">STEP4</h3>
+                        <p className="text-gray-500 mt-2">LINEからジム通いを記録します</p>
+                    </div>
+                </div>
+            </section>
 
-            <footer className="bg-gray-800 text-white py-8 px-4">
-                <div className="flex flex-col items-center md:flex-row md:justify-end space-y-4 md:space-y-0 md:space-x-4 mt-4 md:mt-0">
-                    <a href="/term" className="text-sm hover:underline">
-                        利用規約
-                    </a>
-                    <a href="/privacy" className="text-sm hover:underline">
-                        プライバシーポリシー
-                    </a>
-                    <a href="/laws" className="text-sm hover:underline">
-                        特定商取引法に基づく表記
-                    </a>
+            {/* Footer Section */}
+            <footer className="bg-white py-4 border-t border-gray-200">
+                <div className="max-w-4xl mx-auto px-4">
+                    <ul className="flex flex-col space-y-2 items-center">
+                        <li><a href="/term" className="text-gray-500">利用規約</a></li>
+                        <li><a href="/privacy" className="text-gray-500">プライバシーポリシー</a></li>
+                        <li><a href="laws" className="text-gray-500">特定商取引法に基づく表記</a></li>
+                    </ul>
                 </div>
             </footer>
         </div>
-    )
-}
-
-function FeatureCard({icon, title, description}: {
-    icon: ReactNode,
-    title: string,
-    description: string
-}) {
-    return (
-        <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <div className="flex justify-center mb-4">{icon}</div>
-            <h3 className="text-xl font-semibold mb-2">{title}</h3>
-            <p className="text-gray-600">{description}</p>
-        </div>
-    )
-}
-
-function BenefitCard({title, description}: {
-    title: string,
-    description: string
-}) {
-    return (
-        <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-2">{title}</h3>
-            <p className="text-gray-600">{description}</p>
-        </div>
-    )
-}
-
-function LineButton(){
-    return (
-        <a href="https://lin.ee/UeQYYKU"
-           className={"bg-white text-[#FF8C00] hover:bg-gray-100 h-10 px-4 py-2 rounded-md inline-flex justify-center items-center"}>
-                <span>
-                             LINEで友達追加
-                </span>
-            <ArrowRight className="ml-1" size={20}/>
-        </a>
-    )
+    );
 }
