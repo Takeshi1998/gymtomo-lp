@@ -25,7 +25,7 @@ export default function HomePage() {
                     <p>\ LINEの友達追加で今すぐ始める /</p>
                     <a href="https://lin.ee/43ViCSa">
                         <img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
-                                                          alt="友だち追加" height="36" border="0"/></a>
+                                                          alt="友だち追加" height="36"/></a>
                 </div>
             </section>
 
