@@ -78,7 +78,7 @@ export default function HomePage() {
                     ジムトモは仲間と目標を共有し、互いに刺激を支え合えるフィットネスアプリです。
                 </p>
                 <div className="relative w-full aspect-[335/308] mt-9">
-                    <Image src="/images/lp/top.jpg" alt="ジムトモのスクリーンショット" fill className="object-cover"/>
+                    <Image src="/images/lp/top.png" alt="ジムトモのスクリーンショット" fill className="object-cover"/>
                 </div>
                 <div className="mt-10 w-full px-3">
                     <p className={"mb-1 text-sm"}>\ LINEの友達追加で今すぐ始める /</p>
@@ -130,8 +130,10 @@ export default function HomePage() {
                         altText="覚悟の金額"
                         title={
                             <>
-                                <img src="/images/lp/dumbbell.svg" alt="ダンベル" className="w-9 h-9"/>
-                                <span>覚悟の金額を設定できる</span>
+                                <div className="flex items-center">
+                                    <img src="/images/lp/dumbbell.svg" alt="ダンベル" className="w-9 h-9"/>
+                                    <span>覚悟の金額を設定できる</span>
+                                </div>
                             </>
                         }
                         description="ジム通いをサボった際に課金される金額を設定できます。覚悟を決めて継続力にアップに繋げましょう。"
