@@ -11,14 +11,15 @@ const Header: React.FC = () => (
 // FeatureItemコンポーネント
 type FeatureItemProps = {
     imageSrc: string;
+    imageSize?: { width: number; height: number };
     altText: string;
     title: React.ReactNode;
     description: string;
 };
 
-const FeatureItem: React.FC<FeatureItemProps> = ({imageSrc, altText, title, description}) => (
+const FeatureItem: React.FC<FeatureItemProps> = ({imageSrc, altText, title, description,imageSize}) => (
     <div className="flex flex-col items-center mb-8">
-        <Image src={imageSrc} alt={altText} width={167} height={197}/>
+        <Image src={imageSrc} alt={altText} width={imageSize?.width??167} height={imageSize?.height??197}/>
         <h2 className="text-xl font-bold mt-4 flex flex-col">{title}</h2>
         <p className="mt-2 text-center">{description}</p>
     </div>
@@ -44,7 +45,7 @@ const StepItem: React.FC<StepItemProps> = ({stepNumber, imageSrc, altText, descr
 const Footer: React.FC = () => (
     <footer className="bg-white px-3 py-4 border-t border-gray-200">
         <div className="max-w-4xl mx-auto">
-            <ul className="flex flex-col space-y-3 items-start w-full">
+            <ul className="flex flex-col space-y-6 items-start w-full">
                 {[
                     {href: "/term", label: "利用規約"},
                     {href: "/privacy", label: "プライバシーポリシー"},
@@ -66,7 +67,9 @@ const Footer: React.FC = () => (
 export default function HomePage() {
     return (
         <div className="bg-white max-w-screen-sm text-center mx-auto">
-            <Header/>
+            <div className={"mb-5"}>
+                <Header/>
+            </div>
 
             <section className="flex flex-col items-center text-center pt-1">
                 <h1 className="text-2xl font-bold mt-6 tracking-wide">
@@ -136,6 +139,7 @@ export default function HomePage() {
                                 </div>
                             </>
                         }
+                        imageSize={{width: 100, height: 121}}
                         description="ジム通いをサボった際に課金される金額を設定できます。覚悟を決めて継続力にアップに繋げましょう。"
                     />
                 </div>
