@@ -17,9 +17,9 @@ type FeatureItemProps = {
     description: string;
 };
 
-const FeatureItem: React.FC<FeatureItemProps> = ({imageSrc, altText, title, description,imageSize}) => (
+const FeatureItem: React.FC<FeatureItemProps> = ({imageSrc, altText, title, description, imageSize}) => (
     <div className="flex flex-col items-center mb-8">
-        <Image src={imageSrc} alt={altText} width={imageSize?.width??167} height={imageSize?.height??197}/>
+        <Image src={imageSrc} alt={altText} width={imageSize?.width ?? 167} height={imageSize?.height ?? 197}/>
         <h2 className="text-xl font-bold mt-4 flex flex-col">{title}</h2>
         <p className="mt-2 text-center">{description}</p>
     </div>
@@ -75,10 +75,10 @@ export default function HomePage() {
                 <h1 className="text-2xl font-bold mt-6 tracking-wide">
                     ジム通いをシェアする
                     <br/>
-                    フィットネスアプリ
+                    LINEアプリ
                 </h1>
                 <p className="mt-4 mx-10">
-                    ジムトモは仲間と目標を共有し、互いに刺激を支え合えるフィットネスアプリです。
+                    ジムトモは仲間と目標を共有し、継続をサポートするフィットネスアプリです。
                 </p>
                 <div className="relative w-full aspect-[335/308] mt-9">
                     <Image src="/images/lp/top.png" alt="ジムトモのスクリーンショット" fill className="object-cover"/>
@@ -107,12 +107,12 @@ export default function HomePage() {
                             <>
                                 <div className="flex items-center">
                                     <img src="/images/lp/dumbbell.svg" alt="ダンベル" className="w-9 h-9"/>
-                                    <span>LINEで友達のジム通いを<br/></span>
+                                    <span>仲間のジム活動を<br/></span>
                                 </div>
-                                <span>共有できる</span>
+                                <span>LINEで共有</span>
                             </>
                         }
-                        description="友達のジム通い状況をアプリ内で確認し、LINEでもメッセージで通知します。"
+                        description="毎週あなたと仲間のジム活動状況がLINEメッセージで届きます。"
                     />
                     <FeatureItem
                         imageSrc="/images/lp/checkin.png"
@@ -121,12 +121,12 @@ export default function HomePage() {
                             <>
                                 <div className="flex items-center">
                                     <img src="/images/lp/dumbbell.svg" alt="ダンベル" className="w-9 h-9"/>
-                                    <span>LINEから1秒で<br/></span>
+                                    <span>ワンクリックで<br/></span>
                                 </div>
-                                <span>ジム通いを記録できる</span>
+                                <span>ジム訪問を記録</span>
                             </>
                         }
-                        description="通っているジムを事前に登録し、位置情報を元にLINEから1秒でジム通いが記録できます。"
+                        description="位置情報を活用して、訪れたジムと日付を1秒で記録できます。"
                     />
                     <FeatureItem
                         imageSrc="/images/lp/money.svg"
@@ -135,12 +135,12 @@ export default function HomePage() {
                             <>
                                 <div className="flex items-center">
                                     <img src="/images/lp/dumbbell.svg" alt="ダンベル" className="w-9 h-9"/>
-                                    <span>覚悟の金額を設定できる</span>
+                                    <span>覚悟の金額で本気度アップ</span>
                                 </div>
                             </>
                         }
                         imageSize={{width: 100, height: 121}}
-                        description="ジム通いをサボった際に課金される金額を設定できます。覚悟を決めて継続力にアップに繋げましょう。"
+                        description="目標を達成できなかった場合に、自動で課金される金額を設定できます。自分へのプレッシャーで継続力を高めましょう。"
                     />
                 </div>
             </section>
@@ -152,21 +152,21 @@ export default function HomePage() {
                         ご利用までの流れ
                     </h2>
                     <StepItem stepNumber="1" imageSrc="/images/lp/add-friend.png" altText="LINE友達追加"
-                              description="LINEで友だち追加します"/>
+                              description="LINEで友だち追加"/>
                     <StepItem
                         stepNumber="2"
                         imageSrc="/images/lp/checkin.png"
                         altText="ユーザー登録方法"
-                        description="トーク画面にてチェックインボタンを押します"
+                        description="トーク画面にてチェックインボタン"
                     />
                     <StepItem
                         stepNumber="3"
                         imageSrc="/images/lp/setting.png"
                         altText="目標設定"
-                        description="アプリで目標設定します"
+                        description="アプリで目標設定"
                     />
                     <StepItem stepNumber="4" imageSrc="/images/lp/line-checkin.png" altText="記録画面"
-                              description="公式LINEからジム通いを記録します"/>
+                              description="公式LINEからジム通いを記録"/>
                 </div>
             </section>
             <Footer/>
