@@ -4,8 +4,8 @@ import "./globals.css";
 
 
 const url="https://www.gymtomo.com"
-const title="ジムとも | フィットネスLINEアプリ"
-const description="ジムともは、友達と一緒にジム通いを続けられるフィットネスアプリ。LINEを使ってジム通いの状況を簡単に共有し、継続をサポートします。"
+const title="ジムトモ | フィットネスLINEアプリ"
+const description="ジムトモは、友達と一緒にジム通いを続けられるフィットネスアプリ。LINEを使ってジム通いの状況を簡単に共有し、継続をサポートします。"
 export const metadata:Metadata = {
   title: title,
   description:description,
@@ -30,7 +30,7 @@ export const metadata:Metadata = {
     images:['/images/twitter-ogp.png']
   },
   robots: 'index, follow',
-  keywords: ['ジムとも', 'フィットネスアプリ', 'LINE連携', 'ジム', 'トレーニング', '健康'],
+  keywords: ['ジムトモ', 'フィットネスアプリ', 'LINE連携', 'ジム', 'トレーニング', '健康'],
   alternates:{
     canonical:url
   }
