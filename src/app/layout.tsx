@@ -5,7 +5,7 @@ import "./globals.css";
 
 const url="https://www.gymtomo.com"
 const title="ジムトモ | フィットネスLINEアプリ"
-const description="ジムトモは、友達と一緒にジム通いを続けられるフィットネスアプリ。LINEを使ってジム通いの状況を簡単に共有し、継続をサポートします。"
+const description="ジムトモは仲間と目標を共有し、継続をサポートするフィットネスLINEアプリです。"
 export const metadata:Metadata = {
   title: title,
   description:description,
@@ -16,7 +16,7 @@ export const metadata:Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/ogp.png',
+        url: '/images/ogp.jpg',
         width: 1200,
         height: 630,
         alt: title+'のバナー画像',
