@@ -24,10 +24,10 @@ export const metadata:Metadata = {
     ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: title,
     description: description,
-    images:['/images/twitter-ogp.png']
+    images:['/images/ogp.jpg']
   },
   robots: 'index, follow',
   keywords: ['ジムトモ', 'フィットネスアプリ', 'LINE連携', 'ジム', 'トレーニング', '健康'],
