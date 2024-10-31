@@ -4,7 +4,7 @@ import React from "react";
 // Headerコンポーネント
 const Header: React.FC = () => (
     <header className="flex items-center justify-between pt-4 bg-white">
-        <Image src="/images/logo.svg" alt="ジムトモのロゴ" width={120} height={26} className="w-[100px] h-[22px]"/>
+        <img src="/images/logo.svg" alt="ジムトモのロゴ" width={120} height={26} className="w-[100px] h-[22px]"/>
     </header>
 );
 
@@ -80,8 +80,8 @@ export default function HomePage() {
                 <p className="mt-4 mx-10">
                     ジムトモは仲間と目標を共有し、継続をサポートするフィットネスアプリです。
                 </p>
-                <div className="relative w-full aspect-[335/308] mt-9">
-                    <Image src="/images/lp/top.png" alt="ジムトモのスクリーンショット" fill className="object-cover"/>
+                <div className="relative w-full aspect-[886/792] mt-9">
+                    <Image src="/images/lp/home.jpg" alt="ジムトモのスクリーンショット" fill className="object-cover"/>
                 </div>
                 <div className="mt-10 w-full px-3">
                     <p className={"mb-1 text-sm"}>\ LINEの友達追加で今すぐ始める /</p>
