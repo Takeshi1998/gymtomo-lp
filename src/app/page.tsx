@@ -73,12 +73,12 @@ export default function HomePage() {
 
             <section className="flex flex-col items-center text-center pt-1">
                 <h1 className="text-2xl font-bold mt-6 tracking-wide">
-                    ジム通いをシェアする
+                    仲間と一緒に
                     <br/>
-                    LINEアプリ
+                   ジム通いを続けよう
                 </h1>
                 <p className="mt-4 mx-10">
-                    ジムトモは仲間と目標を共有し、継続をサポートするフィットネスアプリです。
+            週の目標を設定して、一緒に継続しよう。
                 </p>
                 <div className="relative w-full aspect-[886/792] mt-9">
                     <Image src="/images/lp/home.jpg" alt="ジムトモのスクリーンショット" fill className="object-cover"/>
@@ -121,9 +121,9 @@ export default function HomePage() {
                             <>
                                 <div className="flex items-center">
                                     <img src="/images/lp/dumbbell.svg" alt="ダンベル" className="w-9 h-9"/>
-                                    <span>ワンクリックで<br/></span>
+                                    <span>公式ラインから<br/></span>
                                 </div>
-                                <span>ジム訪問を記録</span>
+                                <span>ワンクリックで記録</span>
                             </>
                         }
                         description="位置情報を活用して、訪れたジムと日付を1秒で記録できます。"
@@ -140,7 +140,7 @@ export default function HomePage() {
                             </>
                         }
                         imageSize={{width: 100, height: 121}}
-                        description="目標を達成できなかった場合に、自動で課金される金額を設定できます。自分へのプレッシャーで継続力を高めましょう。"
+                        description="目標を達成できなかった場合に、自動で課金される金額を設定できます。"
                     />
                 </div>
             </section>
@@ -155,17 +155,11 @@ export default function HomePage() {
                               description="LINEで友だち追加"/>
                     <StepItem
                         stepNumber="2"
-                        imageSrc="/images/lp/checkin.png"
-                        altText="ユーザー登録方法"
-                        description="トーク画面にてチェックインボタン"
-                    />
-                    <StepItem
-                        stepNumber="3"
                         imageSrc="/images/lp/setting.png"
                         altText="目標設定"
                         description="アプリで目標設定"
                     />
-                    <StepItem stepNumber="4" imageSrc="/images/lp/line-checkin.png" altText="記録画面"
+                    <StepItem stepNumber="3" imageSrc="/images/lp/line-checkin.png" altText="記録画面"
                               description="公式LINEからジム通いを記録"/>
                 </div>
             </section>

@@ -5,7 +5,7 @@ import "./globals.css";
 
 const url="https://www.gymtomo.com"
 const title="ジムトモ | フィットネスLINEアプリ"
-const description="ジムトモは仲間と目標を共有し、継続をサポートするフィットネスLINEアプリです。"
+const description="ジムトモは仲間と目標を共有し、継続をサポートするLINEアプリです。公式LINEを友達追加するだけで簡単に始められ、インストール不要で手軽に利用できます。"
 export const metadata:Metadata = {
   title: title,
   description:description,
@@ -30,7 +30,7 @@ export const metadata:Metadata = {
     images:['/images/ogp.jpg']
   },
   robots: 'index, follow',
-  keywords: ['ジムトモ', 'フィットネスアプリ', 'LINE連携', 'ジム', 'トレーニング', '健康'],
+  keywords: ['ジムトモ', "ジム友",'筋トレアプリ', 'LINEアプリ', 'ジム', 'トレーニング', '健康'],
   alternates:{
     canonical:url
   }
