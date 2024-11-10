@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 
 const url="https://www.gymtomo.com"
@@ -47,6 +48,8 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || '';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -58,6 +61,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        {!!GA_ID && <GoogleAnalytics gaId={GA_ID} />}
       </body>
     </html>
   );
