@@ -73,12 +73,12 @@ export default function HomePage() {
 
             <section className="flex flex-col items-center text-center pt-1">
                 <h1 className="text-2xl font-bold mt-6 tracking-wide">
-                    仲間と一緒に
+                    LINEで簡単！
                     <br/>
-                   ジム通いを続けよう
+                   仲間とジム通いをシェア
                 </h1>
                 <p className="mt-4 mx-10">
-            週の目標を設定して、一緒に継続しよう。
+            公式ラインからワンクリックで記録できます
                 </p>
                 <div className="relative w-full aspect-[886/792] mt-9">
                     <Image src="/images/lp/home.jpg" alt="ジムトモのスクリーンショット" fill className="object-cover"/>
