@@ -101,8 +101,9 @@ export default function HomePage() {
             <section className="py-12 px-12">
                 <div className="mx-auto">
                     <FeatureItem
-                        imageSrc="/images/lp/friend.png"
+                        imageSrc="/images/lp/friend.jpg"
                         altText="記録一覧画面"
+                        imageSize={{width: 190, height: 190}}
                         title={
                             <>
                                 <div className="flex items-center">
@@ -115,7 +116,7 @@ export default function HomePage() {
                         description="毎週あなたと仲間のジム活動状況がLINEメッセージで届きます。"
                     />
                     <FeatureItem
-                        imageSrc="/images/lp/checkin.png"
+                        imageSrc="/images/lp/checkin.jpg"
                         altText="ジム通いの記録"
                         title={
                             <>
@@ -127,9 +128,10 @@ export default function HomePage() {
                             </>
                         }
                         description="位置情報を活用して、訪れたジムと日付を1秒で記録できます。"
+                        imageSize={{width: 200, height: 200}}
                     />
                     <FeatureItem
-                        imageSrc="/images/lp/money.svg"
+                        imageSrc="/images/lp/money.jpg"
                         altText="覚悟の金額"
                         title={
                             <>
@@ -139,7 +141,7 @@ export default function HomePage() {
                                 </div>
                             </>
                         }
-                        imageSize={{width: 100, height: 121}}
+                        imageSize={{width: 200, height: 134}}
                         description="目標を達成できなかった場合に、自動で課金される金額を設定できます。"
                     />
                 </div>
