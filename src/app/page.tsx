@@ -78,7 +78,7 @@ export default function HomePage() {
                    仲間とジム通いをシェア
                 </h1>
                 <p className="mt-4 mx-10">
-            公式ラインからワンクリックで記録できます
+            公式ラインからワンクリックで記録
                 </p>
                 <div className="relative w-full aspect-[886/792] mt-9">
                     <Image src="/images/lp/home.jpg" alt="ジムトモのスクリーンショット" fill className="object-cover"/>
@@ -108,12 +108,12 @@ export default function HomePage() {
                             <>
                                 <div className="flex items-center">
                                     <img src="/images/lp/dumbbell.svg" alt="ダンベル" className="w-9 h-9"/>
-                                    <span>仲間のジム活動を<br/></span>
+                                    <span>ジム活動を</span>
+                                    <span>LINEで共有</span>
                                 </div>
-                                <span>LINEで共有</span>
                             </>
                         }
-                        description="毎週あなたと仲間のジム活動状況がLINEメッセージで届きます。"
+                        description="毎週、あなたと仲間のジム活動状況がLINEメッセージで届きます。"
                     />
                     <FeatureItem
                         imageSrc="/images/lp/checkin.jpg"
