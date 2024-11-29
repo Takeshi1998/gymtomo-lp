@@ -75,7 +75,7 @@ export default function HomePage() {
                 <h1 className="text-2xl font-bold mt-6 tracking-wide">
                     LINEで簡単！
                     <br/>
-                   仲間とジム通いをシェア
+                   友達とジム通いをシェア
                 </h1>
                 <p className="mt-4 mx-10">
             公式LINEからワンクリックで記録
@@ -113,7 +113,7 @@ export default function HomePage() {
                                 </div>
                             </>
                         }
-                        description="毎週、あなたと仲間のジム通い記録がLINEメッセージで届きます。"
+                        description="毎週、あなたと友達のジム通い記録がLINEメッセージで届きます。"
                     />
                     <FeatureItem
                         imageSrc="/images/lp/checkin.jpg"
