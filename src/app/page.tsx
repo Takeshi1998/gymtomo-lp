@@ -1,5 +1,6 @@
 import Image from "next/image";
-import React from "react";
+import React, {ReactNode} from "react";
+import {Text} from "@/components/ui/Text";
 
 // Headerコンポーネント
 const Header: React.FC = () => (
@@ -14,14 +15,14 @@ type FeatureItemProps = {
     imageSize?: { width: number; height: number };
     altText: string;
     title: React.ReactNode;
-    description: string;
+    description: ReactNode;
 };
 
 const FeatureItem: React.FC<FeatureItemProps> = ({imageSrc, altText, title, description, imageSize}) => (
     <div className="flex flex-col items-center mb-8">
         <Image src={imageSrc} alt={altText} width={imageSize?.width ?? 167} height={imageSize?.height ?? 197}/>
-        <h2 className="text-xl font-bold mt-4 flex flex-col">{title}</h2>
-        <p className="mt-2 text-center">{description}</p>
+        <Text as={"h2"} bold size={"xl"} className="mt-4 flex flex-col">{title}</Text>
+        {description}
     </div>
 );
 
@@ -66,28 +67,29 @@ const Footer: React.FC = () => (
 // メインコンポーネント
 export default function HomePage() {
     return (
-        <div className="bg-white max-w-screen-sm text-center mx-auto">
+        <div className="bg-white max-w-[500px] text-center mx-auto">
             <div className={"mb-5"}>
                 <Header/>
             </div>
 
             <section className="flex flex-col items-center text-center pt-1">
-                <h1 className="text-2xl font-bold mt-6 tracking-wide">
+                <Text size={"2xl"} bold className="mt-4">
                     LINEで簡単！
                     <br/>
-                   友達とジム通いをシェア
-                </h1>
-                <p className="mt-4 mx-10">
-            公式LINEからワンクリックで記録
-                </p>
+                    友達とジム通いをシェア
+                </Text>
+                <Text className="mt-4 mx-10">
+                    公式LINEからワンクリックで記録
+                </Text>
                 <div className="relative w-full aspect-[886/792] mt-9">
                     <Image src="/images/lp/home.jpg" alt="ジムトモのスクリーンショット" fill className="object-cover"/>
                 </div>
                 <div className="mt-10 w-full px-3">
-                    <p className={"mb-1 text-sm"}>\ LINEの友達追加で今すぐ始める /</p>
+                    <Text size={"sm"} className={"mb-1"}>\ LINEの友達追加で今すぐ始める /</Text>
                     <a
                         href="https://lin.ee/43ViCSa"
                         className="block w-full bg-green-500 hover:bg-green-600 rounded-lg py-3 text-center"
+                        rel="nofollow"
                     >
                         <div className="flex justify-center items-center space-x-1">
                             <img src={"/images/lp/line-button.svg"} alt="LINE 友達追加ボタン" className="h-6"/>
@@ -98,7 +100,7 @@ export default function HomePage() {
             </section>
 
             {/* Features Section */}
-            <section className="py-12 px-12">
+            <section className="py-9 px-12">
                 <div className="mx-auto">
                     <FeatureItem
                         imageSrc="/images/lp/friend.jpg"
@@ -108,12 +110,11 @@ export default function HomePage() {
                             <>
                                 <div className="flex items-center">
                                     <img src="/images/lp/dumbbell.svg" alt="ダンベル" className="w-9 h-9"/>
-                                    <span>ジム通いを</span>
-                                    <span>LINEで共有</span>
+                                    <span>ジム通いをLINEで共有</span>
                                 </div>
                             </>
                         }
-                        description="毎週、あなたと友達のジム通い記録がLINEメッセージで届きます。"
+                        description={<Text className="mt-2 text-left">週間レポートを毎週日曜の朝にLINEでお届け！<br/>友達とグループを作成することで、お互いの記録が共有されます。</Text>}
                     />
                     <FeatureItem
                         imageSrc="/images/lp/checkin.jpg"
@@ -122,12 +123,12 @@ export default function HomePage() {
                             <>
                                 <div className="flex items-center">
                                     <img src="/images/lp/dumbbell.svg" alt="ダンベル" className="w-9 h-9"/>
-                                    <span>公式ラインから<br/></span>
+                                    <span>公式ラインから</span>
                                 </div>
                                 <span>ワンクリックで記録</span>
                             </>
                         }
-                        description="位置情報を活用して、訪れたジムと日付を1秒で記録できます。"
+                        description={<Text className="mt-2 text-left">事前に通っているジムを登録し、LINEからワンクリックで記録できます。<br/>ジムから離れている場合は記録できないため、偽りのチェックインを防止。</Text>}
                         imageSize={{width: 200, height: 200}}
                     />
                     <FeatureItem
@@ -137,12 +138,14 @@ export default function HomePage() {
                             <>
                                 <div className="flex items-center">
                                     <img src="/images/lp/dumbbell.svg" alt="ダンベル" className="w-9 h-9"/>
-                                    <span>覚悟の金額で本気度アップ</span>
+                                    <span>覚悟の金額で</span>
                                 </div>
+                                <span>本気度をさらにアップ</span>
                             </>
                         }
                         imageSize={{width: 200, height: 134}}
-                        description="目標を達成できなかった場合に、自動で課金される金額を設定できます。"
+                        description={<Text
+                            className="mt-2 text-left">目標を達成できなかった場合に、自分で設定した金額が課金されます。友達と一緒に覚悟を決めて、確実にジム通いを継続しましょう。</Text>}
                     />
                 </div>
             </section>
@@ -162,7 +165,7 @@ export default function HomePage() {
                         description="アプリで目標設定"
                     />
                     <StepItem stepNumber="3" imageSrc="/images/lp/line-checkin.png" altText="記録画面"
-                              description="公式LINEからジム通いを記録"/>
+                              description="公式LINEからチェックイン"/>
                 </div>
             </section>
             <Footer/>

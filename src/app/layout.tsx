@@ -6,7 +6,7 @@ import {GoogleAnalytics} from '@next/third-parties/google';
 
 const url = "https://www.gymtomo.com"
 const title = "ジムトモ | 筋トレ記録アプリ"
-const description = "ジムトモはLINEで友達と記録をシェアして、ジム通いをもっと手軽に続けられるアプリです。記録はワンクリックで残せます。お互いの進捗をチェックして、やる気をキープ！ "
+const description = "LINEで友達とジム通いをシェアするアプリです。LINEからワンクリックで簡単に記録。友達とグループを作成することで、お互いの記録が共有されます。"
 export const metadata: Metadata = {
     title: title,
     description: description,
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         type: 'website',
         images: [
             {
-                url: '/images/ogp.jpg',
+                url: '/images/ogp.png',
                 width: 1200,
                 height: 630,
                 alt: title + 'のバナー画像',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: title,
         description: description,
-        images: ['/images/ogp.jpg']
+        images: ['/images/ogp.png']
     },
     robots: 'index, follow',
     keywords: ['ジムトモ', "ジム友", 'トレーニング記録','筋トレ記録アプリ', 'LINEアプリ', 'ジム', 'トレーニング', '健康'],
