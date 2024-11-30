@@ -21,7 +21,7 @@ type FeatureItemProps = {
 const FeatureItem: React.FC<FeatureItemProps> = ({imageSrc, altText, title, description, imageSize}) => (
     <div className="flex flex-col items-center mb-8">
         <Image src={imageSrc} alt={altText} width={imageSize?.width ?? 167} height={imageSize?.height ?? 197}/>
-        <Text as={"h2"} bold size={"xl"} className="mt-4 flex flex-col">{title}</Text>
+        <Text as={"h2"} bold size={"xl"} className="mt-3 flex flex-col">{title}</Text>
         {description}
     </div>
 );
@@ -68,12 +68,12 @@ const Footer: React.FC = () => (
 export default function HomePage() {
     return (
         <div className="bg-white max-w-[500px] text-center mx-auto">
-            <div className={"mb-5"}>
+            <div className={"mb-3"}>
                 <Header/>
             </div>
 
             <section className="flex flex-col items-center text-center pt-1">
-                <Text size={"2xl"} bold className="mt-4">
+                <Text size={"2xl"} bold>
                     LINEで簡単！
                     <br/>
                     友達とジム通いをシェア
@@ -114,7 +114,7 @@ export default function HomePage() {
                                 </div>
                             </>
                         }
-                        description={<Text className="mt-2 text-left">週間レポートを毎週日曜の朝にLINEでお届け！<br/>友達とグループを作成することで、お互いの記録が共有されます。</Text>}
+                        description={<Text className="mt-1 text-left">週間レポートを毎週日曜の朝にLINEでお届け！<br/>友達とグループを作成することで、お互いの記録が共有されます。</Text>}
                     />
                     <FeatureItem
                         imageSrc="/images/lp/checkin.jpg"
@@ -128,7 +128,7 @@ export default function HomePage() {
                                 <span>ワンクリックで記録</span>
                             </>
                         }
-                        description={<Text className="mt-2 text-left">事前に通っているジムを登録し、LINEからワンクリックで記録できます。<br/>ジムから離れている場合は記録できないため、偽りのチェックインを防止。</Text>}
+                        description={<Text className="mt-1 text-left">事前に通っているジムを登録し、LINEからワンクリックで記録できます。<br/>ジムから離れている場合は記録できないため、偽りのチェックインを防止。</Text>}
                         imageSize={{width: 200, height: 200}}
                     />
                     <FeatureItem
@@ -145,7 +145,7 @@ export default function HomePage() {
                         }
                         imageSize={{width: 200, height: 134}}
                         description={<Text
-                            className="mt-2 text-left">目標を達成できなかった場合に、自分で設定した金額が課金されます。友達と一緒に覚悟を決めて、確実にジム通いを継続しましょう。</Text>}
+                            className="mt-1 text-left">目標を達成できなかった場合に、自分で設定した金額が課金されます。友達と一緒に覚悟を決めて、確実にジム通いを継続しましょう。</Text>}
                     />
                 </div>
             </section>
