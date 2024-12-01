@@ -114,7 +114,7 @@ export default function HomePage() {
                                 <span>ワンクリックで報告</span>
                             </>
                         }
-                        description={<Text className="mt-1 text-left mb-5">事前に通っているジムを登録し、LINEからワンクリックで報告できます。<br/>ジムから離れている場合はチェックインできないため、偽りの報告を防止。</Text>}
+                        description={<Text className="mt-1 text-left mb-7">事前に通っているジムを登録し、LINEからワンクリックで報告できます。<br/>ジムから離れている場合はチェックインできないため、偽りの報告を防止。</Text>}
                         imageSize={{width: 200, height: 200}}
                     />
                     <FeatureItem
@@ -129,7 +129,7 @@ export default function HomePage() {
                                 </div>
                             </>
                         }
-                        description={<Text className="mt-1 text-left mb-5">週間レポートを日曜日の朝にLINEでお届け！<br/>友達とグループを作成することで、お互いの記録が共有されます。</Text>}
+                        description={<Text className="mt-1 text-left mb-7">週間レポートを日曜日の朝にLINEでお届け！<br/>友達とグループを作成することで、お互いの記録が共有されます。</Text>}
                     />
                     <FeatureItem
                         imageSrc="/images/lp/money.jpg"
@@ -145,7 +145,7 @@ export default function HomePage() {
                         }
                         imageSize={{width: 200, height: 134}}
                         description={<Text
-                            className="mt-1 text-left mb-5">目標を達成できなかった場合に、自分で設定した金額が課金されます。友達と一緒に覚悟を決めて、確実にジム通いを継続しましょう。</Text>}
+                            className="mt-1 text-left mb-7">目標を達成できなかった場合に、自分で設定した金額が課金されます。友達と一緒に覚悟を決めて、確実にジム通いを継続しましょう。</Text>}
                     />
                 </div>
             </section>
