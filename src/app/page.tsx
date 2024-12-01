@@ -19,9 +19,9 @@ type FeatureItemProps = {
 };
 
 const FeatureItem: React.FC<FeatureItemProps> = ({imageSrc, altText, title, description, imageSize}) => (
-    <div className="flex flex-col items-center mb-8">
+    <div className="flex flex-col items-center">
         <Image src={imageSrc} alt={altText} width={imageSize?.width ?? 167} height={imageSize?.height ?? 197}/>
-        <Text as={"h2"} bold size={"xl"} className="mt-3 flex flex-col">{title}</Text>
+        <Text as={"h2"} bold size={"xl"} className="mt-3 mb-1 flex flex-col">{title}</Text>
         {description}
     </div>
 );
@@ -76,10 +76,10 @@ export default function HomePage() {
                 <Text size={"2xl"} bold>
                     LINEで簡単！
                     <br/>
-                    友達とジム通いをシェア
+                    友達とジム通いを報告
                 </Text>
                 <Text className="mt-4 mx-10">
-                    公式LINEからワンクリックで記録
+                    公式LINEからワンクリックで報告
                 </Text>
                 <div className="relative w-full aspect-[886/792] mt-9">
                     <Image src="/images/lp/home.jpg" alt="ジムトモのスクリーンショット" fill className="object-cover"/>
@@ -110,11 +110,11 @@ export default function HomePage() {
                             <>
                                 <div className="flex items-center">
                                     <img src="/images/lp/dumbbell.svg" alt="ダンベル" className="w-9 h-9"/>
-                                    <span>ジム通いをLINEで共有</span>
+                                    <span>ジム通いをLINEで報告</span>
                                 </div>
                             </>
                         }
-                        description={<Text className="mt-1 text-left">週間レポートを毎週日曜の朝にLINEでお届け！<br/>友達とグループを作成することで、お互いの記録が共有されます。</Text>}
+                        description={<Text className="mt-1 text-left">週間レポートを日曜日の朝にLINEでお届け！<br/>友達とグループを作成することで、お互いの記録が共有されます。</Text>}
                     />
                     <FeatureItem
                         imageSrc="/images/lp/checkin.jpg"
@@ -125,10 +125,10 @@ export default function HomePage() {
                                     <img src="/images/lp/dumbbell.svg" alt="ダンベル" className="w-9 h-9"/>
                                     <span>公式ラインから</span>
                                 </div>
-                                <span>ワンクリックで記録</span>
+                                <span>ワンクリックで報告</span>
                             </>
                         }
-                        description={<Text className="mt-1 text-left">事前に通っているジムを登録し、LINEからワンクリックで記録できます。<br/>ジムから離れている場合は記録できないため、偽りのチェックインを防止。</Text>}
+                        description={<Text className="mt-1 text-left mb-6">事前に通っているジムを登録し、LINEからワンクリックで報告できます。<br/>ジムから離れている場合は記録できないため、偽りのチェックインを防止。</Text>}
                         imageSize={{width: 200, height: 200}}
                     />
                     <FeatureItem
@@ -140,7 +140,7 @@ export default function HomePage() {
                                     <img src="/images/lp/dumbbell.svg" alt="ダンベル" className="w-9 h-9"/>
                                     <span>覚悟の金額で</span>
                                 </div>
-                                <span>本気度をさらにアップ</span>
+                                <span>本気度をアップ(任意)</span>
                             </>
                         }
                         imageSize={{width: 200, height: 134}}

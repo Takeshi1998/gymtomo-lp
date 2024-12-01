@@ -5,8 +5,8 @@ import {GoogleAnalytics} from '@next/third-parties/google';
 
 
 const url = "https://www.gymtomo.com"
-const title = "ジムトモ | 筋トレ記録アプリ"
-const description = "LINEで友達とジム通いをシェアするアプリです。LINEからワンクリックで簡単に記録。友達とグループを作成することで、お互いの記録が共有されます。"
+const title = "ジムトモ | LINEで友達とジム通いを報告"
+const description = "LINEで友達とジム通いを報告し合うアプリです。LINEからワンクリックで簡単に報告。友達とグループを作成することで、お互いの記録が共有されます。"
 export const metadata: Metadata = {
     title: title,
     description: description,
