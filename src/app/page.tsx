@@ -128,7 +128,7 @@ export default function HomePage() {
                                 <span>ワンクリックで報告</span>
                             </>
                         }
-                        description={<Text className="mt-1 text-left mb-6">事前に通っているジムを登録し、LINEからワンクリックで報告できます。<br/>ジムから離れている場合は記録できないため、偽りのチェックインを防止。</Text>}
+                        description={<Text className="mt-1 text-left mb-6">事前に通っているジムを登録し、LINEからワンクリックで報告できます。<br/>ジムから離れている場合はチェックインできないため、偽りの報告を防止。</Text>}
                         imageSize={{width: 200, height: 200}}
                     />
                     <FeatureItem
