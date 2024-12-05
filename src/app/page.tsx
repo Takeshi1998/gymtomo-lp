@@ -73,19 +73,14 @@ export default function HomePage() {
             </div>
 
             <section className="flex flex-col items-center text-center pt-1">
-                <Text size={"2xl"} bold>
-                    LINEで簡単！
-                    <br/>
-                    友達とジム通いを報告
+                <Text size={"xxl"} className={"mt-2"} bold>
+                    嘘がつけない<br/>
+                    筋トレ共有アプリ
                 </Text>
-                <Text className="mt-4 mx-10">
-                    公式LINEからワンクリックで報告
+                <Text className="mt-2 mx-10">
+                    公式LINEからワンクリックで記録
                 </Text>
-                <div className="relative w-full aspect-[886/792] mt-9">
-                    <Image src="/images/lp/home.jpg" alt="ジムトモのスクリーンショット" fill className="object-cover"/>
-                </div>
-                <div className="mt-10 w-full px-3">
-                    <Text size={"sm"} className={"mb-1"}>\ LINEの友達追加で今すぐ始める /</Text>
+                <div className="mt-6 w-[160px]">
                     <a
                         href="https://lin.ee/43ViCSa"
                         className="block w-full bg-green-500 hover:bg-green-600 rounded-lg py-3 text-center"
@@ -97,24 +92,43 @@ export default function HomePage() {
                         </div>
                     </a>
                 </div>
+                <div className="relative w-full aspect-[886/792] mt-9">
+                    <Image src="/images/lp/home.jpg" alt="ジムトモのスクリーンショット" fill className="object-cover"/>
+                </div>
+            </section>
+
+            <section>
+                <div className={"bg-[#FF8C00] text-white py-16 mt-20 text-left px-6"}>
+                    <div>
+                        <Text size="xxl" bold>
+                            {`”友達の頑張りが、あなたの継続力に”`}
+                        </Text>
+                    </div>
+
+                    <div className={"mt-6"}>
+                        <Text bold size={"lg"}>
+                            友達と一緒ならジムに行けるけど、<br/>一人ではついサボってしまう。<br/>ジムトモでは、友達とジム通いを共有することで継続をサポートします。
+                        </Text>
+                    </div>
+                </div>
             </section>
 
             {/* Features Section */}
             <section className="py-9 px-12">
                 <div className="mx-auto">
+                    <h2 className="text-2xl font-bold text-center tracking-wide" id="how-to-use">
+                        3つの特徴
+                    </h2>
                     <FeatureItem
                         imageSrc="/images/lp/checkin.jpg"
                         altText="ジム通いの記録"
                         title={
                             <>
-                                <div className="flex items-center">
-                                    <img src="/images/lp/dumbbell.svg" alt="ダンベル" className="w-9 h-9"/>
                                     <span>公式ラインから</span>
-                                </div>
-                                <span>ワンクリックで報告</span>
+                                <span>ワンクリックで記録</span>
                             </>
                         }
-                        description={<Text className="mt-1 text-left mb-7">事前に通っているジムを登録し、LINEからワンクリックで報告できます。<br/>ジムから離れている場合はチェックインできないため、偽りの報告を防止。</Text>}
+                        description={<Text className="mt-1 text-left mb-7">事前に通っているジムを登録し、LINEからワンクリックで記録できます。<br/>ジムから離れている場合はチェックインできないため、嘘の記録はできません。</Text>}
                         imageSize={{width: 200, height: 200}}
                     />
                     <FeatureItem
@@ -123,10 +137,7 @@ export default function HomePage() {
                         imageSize={{width: 190, height: 190}}
                         title={
                             <>
-                                <div className="flex items-center">
-                                    <img src="/images/lp/dumbbell.svg" alt="ダンベル" className="w-9 h-9"/>
                                     <span>ジム記録をLINEで共有</span>
-                                </div>
                             </>
                         }
                         description={<Text className="mt-1 text-left mb-7">週間レポートを日曜日の朝にLINEでお届け！<br/>友達とグループを作成することで、お互いの記録が共有されます。</Text>}
@@ -136,10 +147,7 @@ export default function HomePage() {
                         altText="覚悟の金額"
                         title={
                             <>
-                                <div className="flex items-center">
-                                    <img src="/images/lp/dumbbell.svg" alt="ダンベル" className="w-9 h-9"/>
-                                    <span>覚悟の金額で</span>
-                                </div>
+                                <span>覚悟の金額で</span>
                                 <span>本気度をアップ(任意)</span>
                             </>
                         }
