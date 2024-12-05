@@ -2,7 +2,7 @@ import clsx from 'clsx';
 
 import type { FC, ReactNode } from 'react';
 
-export type TextSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+export type TextSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 type Props = {
   size?: TextSize;
   bold?: boolean;
@@ -21,7 +21,7 @@ export const Text: FC<Props> = ({ as, bold, size, color, noWrap, children, class
     md: 'text-base leading-7',
     lg: 'text-lg leading-7',
     xl: 'text-xl leading-8',
-    '2xl': 'text-2xl leading-9',
+    xxl: 'text-2xl leading-9',
   };
   const colorMap = {
     default: 'text-body',

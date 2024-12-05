@@ -5,8 +5,8 @@ import {GoogleAnalytics} from '@next/third-parties/google';
 
 
 const url = "https://www.gymtomo.com"
-const title = "ジムトモ | LINEで友達とジム通いを報告"
-const description = "LINEで友達とジム通いを報告し合うアプリです。LINEからワンクリックで簡単に報告。友達とグループを作成することで、お互いの記録が共有されます。"
+const title = "ジムトモ | 嘘がつけない筋トレ共有アプリ"
+const description = "LINEで友達とジム通いを共有するアプリです。LINEからワンクリックで簡単に記録。通っているジムから離れている場合はチェックインできないため、嘘の記録はできません。"
 export const metadata: Metadata = {
     title: title,
     description: description,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         images: ['/images/twitter-ogp.png'],
     },
     robots: 'index, follow',
-    keywords: ['ジムトモ', "ジム友", 'トレーニング記録','筋トレ記録アプリ', 'LINEアプリ', 'ジム', 'トレーニング', '健康'],
+    keywords: ['ジムトモ', "ジム友", "筋トレ記録",'トレーニング記録', 'LINEアプリ', 'LINEでジム通いを報告','ジム', 'トレーニング', '健康'],
     alternates: {
         canonical: url
     }
