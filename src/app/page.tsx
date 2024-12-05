@@ -126,11 +126,11 @@ export default function HomePage() {
                         altText="ジム通いの記録"
                         title={
                             <>
-                                    <span>公式ラインから</span>
+                                    <span>公式LINEから</span>
                                 <span>ワンクリックで記録</span>
                             </>
                         }
-                        description={<Text className="mt-1 text-left mb-7">事前に通っているジムを登録し、LINEからワンクリックで記録できます。<br/>ジムから離れている場合はチェックインできないため、嘘の記録はできません。</Text>}
+                        description={<Text className="mt-1 text-left mb-7">事前に通っているジムを登録し、公式LINEからワンクリックで記録できます。<br/>ジムから離れている場合はチェックインできないため、嘘の記録はできません。</Text>}
                         imageSize={{width: 200, height: 200}}
                     />
                     <FeatureItem
@@ -150,12 +150,12 @@ export default function HomePage() {
                         title={
                             <>
                                 <span>覚悟の金額で</span>
-                                <span>本気度をアップ(任意)</span>
+                                <span>本気度をアップ</span>
                             </>
                         }
                         imageSize={{width: 200, height: 134}}
                         description={<Text
-                            className="mt-1 text-left mb-7">目標を達成できなかった場合に、自分で設定した金額が課金されます。友達と一緒に覚悟を決めて、確実にジム通いを継続しましょう。</Text>}
+                            className="mt-1 text-left mb-7">目標を達成できなかった場合に、自分で設定した金額が課金されます。友達と一緒に覚悟を決めて、確実にジム通いを継続しましょう。(未設定も可)</Text>}
                     />
                 </div>
             </section>
