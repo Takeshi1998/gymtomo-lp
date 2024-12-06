@@ -35,16 +35,16 @@ type StepItemProps = {
 };
 
 const StepItem: React.FC<StepItemProps> = ({stepNumber, imageSrc, altText, description}) => (
-    <div className="flex flex-col items-center mb-8">
+    <div className="flex flex-col items-center mb-12">
         <Image src={imageSrc} alt={altText} width={167} height={194}/>
-        <h3 className="text-xl font-bold mt-4">STEP{stepNumber}</h3>
+        <h3 className="text-xl font-bold">STEP{stepNumber}</h3>
         <p className="mt-2">{description}</p>
     </div>
 );
 
 // Footerコンポーネント
 const Footer: React.FC = () => (
-    <footer className="bg-white px-3 py-4 border-t border-gray-200">
+    <footer className="bg-white px-4 py-6 border-t border-gray-200">
         <div className="max-w-4xl mx-auto">
             <ul className="flex flex-col space-y-6 items-start w-full">
                 {[
@@ -116,7 +116,7 @@ export default function HomePage() {
             </section>
 
             {/* Features Section */}
-            <section className="py-9 px-12">
+            <section className="py-20 px-12">
                 <div className="mx-auto">
                     <h2 className="text-2xl font-bold text-center tracking-wide" id="how-to-use">
                         3つの特徴
@@ -130,19 +130,19 @@ export default function HomePage() {
                                 <span>ワンクリックで記録</span>
                             </>
                         }
-                        description={<Text className="mt-1 text-left mb-7">事前に通っているジムを登録し、公式LINEからワンクリックで記録できます。<br/>ジムから離れている場合はチェックインできないため、嘘の記録はできません。</Text>}
-                        imageSize={{width: 200, height: 200}}
+                        description={<Text className="mt-1 text-left mb-12">事前に通っているジムを登録し、公式LINEからワンクリックで記録できます。<br/>ジムから離れている場合はチェックインできないため、嘘の記録はできません。</Text>}
+                        imageSize={{width: 240, height: 240}}
                     />
                     <FeatureItem
                         imageSrc="/images/lp/friend.jpg"
                         altText="記録一覧画面"
-                        imageSize={{width: 190, height: 190}}
+                        imageSize={{width: 230, height: 230}}
                         title={
                             <>
                                     <span>ジム記録をLINEで共有</span>
                             </>
                         }
-                        description={<Text className="mt-1 text-left mb-7">週間レポートを日曜日の朝にLINEでお届け！<br/>友達とグループを作成することで、お互いの記録が共有されます。</Text>}
+                        description={<Text className="mt-1 text-left mb-12">週間レポートを日曜日の朝にLINEでお届け！<br/>友達とグループを作成することで、お互いの記録が共有されます。</Text>}
                     />
                     <FeatureItem
                         imageSrc="/images/lp/money.jpg"
@@ -153,15 +153,15 @@ export default function HomePage() {
                                 <span>本気度をアップ</span>
                             </>
                         }
-                        imageSize={{width: 200, height: 134}}
+                        imageSize={{width: 210, height: 141}}
                         description={<Text
-                            className="mt-1 text-left mb-7">目標を達成できなかった場合に、自分で設定した金額が課金されます。友達と一緒に覚悟を決めて、確実にジム通いを継続しましょう。(未設定も可)</Text>}
+                            className="mt-1 text-left">目標を達成できなかった場合に、自分で設定した金額が課金されます。友達と一緒に覚悟を決めて、確実にジム通いを継続しましょう。(未設定も可)</Text>}
                     />
                 </div>
             </section>
 
             {/* How to Use Section */}
-            <section className="bg-gray-50 py-12">
+            <section className="bg-gray-50 py-20">
                 <div className="max-w-4xl mx-auto w-[200px]">
                     <h2 className="text-2xl font-bold text-center mb-8 tracking-wide" id="how-to-use">
                         ご利用までの流れ
