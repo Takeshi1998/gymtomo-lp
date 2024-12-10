@@ -126,11 +126,10 @@ export default function HomePage() {
                         altText="ジム通いの記録"
                         title={
                             <>
-                                    <span>公式LINEから</span>
-                                <span>ワンクリックで記録</span>
+                                <span>嘘の記録を防止</span>
                             </>
                         }
-                        description={<Text className="mt-1 text-left mb-12">事前に通っているジムを登録し、公式LINEからワンクリックで記録できます。<br/>ジムから離れている場合はチェックインできないため、嘘の記録はできません。</Text>}
+                        description={<Text className="mt-1 text-left mb-12">ジムの近くにいないとチェックインできないので、ジムに行っていないのに行ったと嘘の記録をすることはできません。</Text>}
                         imageSize={{width: 240, height: 240}}
                     />
                     <FeatureItem
@@ -139,7 +138,7 @@ export default function HomePage() {
                         imageSize={{width: 230, height: 230}}
                         title={
                             <>
-                                    <span>ジム記録をLINEで共有</span>
+                                <span>ジム記録をLINEで共有</span>
                             </>
                         }
                         description={<Text className="mt-1 text-left mb-12">週間レポートを日曜日の朝にLINEでお届け！<br/>友達とグループを作成することで、お互いの記録が共有されます。</Text>}
